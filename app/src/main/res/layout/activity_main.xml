@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.93"
         tools:layout_editor_absoluteX="1dp">
 
         <TableRow
@@ -282,28 +283,35 @@
         </TableRow>
     </TableLayout>
 
-    <TextView
+    <EditText
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="373dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="60dp"
+        android:autofillHints="false"
+        android:inputType="none"
         android:text="@string/display"
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/backspaceBTN"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:text="@string/backspace"
+        android:contentDescription="@string/backspace"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/backspace"
+        android:background="@drawable/circle"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
