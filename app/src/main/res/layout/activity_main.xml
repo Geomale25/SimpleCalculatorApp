@@ -29,7 +29,7 @@
                 android:background="@drawable/circle"
                 android:backgroundTint="#F16D0A"
                 android:text="@string/clear"
-                android:textColor="@color/white"
+                android:textColor="#FFFFFF"
                 android:textSize="24sp" />
 
             <Button
@@ -285,8 +285,8 @@
 
     <EditText
         android:id="@+id/input"
-        android:layout_width="373dp"
-        android:layout_height="68dp"
+        android:layout_width="347dp"
+        android:layout_height="73dp"
         android:layout_marginTop="60dp"
         android:autofillHints="false"
         android:inputType="none"
@@ -314,4 +314,15 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/backspace"
         android:background="@drawable/circle"/>
+
+    <TextView
+        android:id="@+id/solution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input" />
 </androidx.constraintlayout.widget.ConstraintLayout>
