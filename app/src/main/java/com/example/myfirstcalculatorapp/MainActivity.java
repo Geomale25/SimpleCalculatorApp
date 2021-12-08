@@ -129,6 +129,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clearText();
+            }
+        });
+
         backspace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         parenthesis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateText("delete");
+                updateText("(");
             }
         });
 
@@ -154,6 +161,12 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("\n================\nLeft: " + leftStr + "\nRight: " + rightStr + "\n================");
 
         System.out.println(">>>>>>>>>>>>>>>>>> " + display.getText().toString());
+
+        if(display.getText().toString().equals(getString(R.string.display))){
+            System.out.println(display.getText().toString() + display.getText().toString().equals(getString(R.string.display)) + " ======= " + strToAdd);
+            display.setText("");
+            display.setText(strToAdd);
+        }
 
         if(strToAdd != "delete"){
             String newStr = String.format("%s%s%s", leftStr, strToAdd, rightStr);
